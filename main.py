@@ -58,6 +58,19 @@ def Provinvias():
         a.append({"ID":[0],"NOMBRE": i[1]})
     return a
 
+@app.get('api/Robos')
+def Robos():
+    a=[]
+    conexion=sqlite3.connect('app.db')
+    registro=conexion.cursor()
+    data = registro.execute("SELECT * FROM ROBO")
+    conexion.commit()
+    datos = data.fetchall()
+    for i in datos:
+        a.append({"ID":[0],"CEDULA": i[1],"NOMBRE": i[2],"APELLIDO": i[3],"LATITUD": i[7],"LONGITUD": i[8]})
+    return a
+
+
 
 
 

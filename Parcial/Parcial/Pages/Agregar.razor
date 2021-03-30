@@ -1,0 +1,99 @@
+﻿@page "/Agregar"
+@inject HttpClient http
+
+<div class="card" style="width: 70%; margin-left:15%">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">Cedula</a>
+            <div class="d-flex">
+                <input @bind-value="cedula" class="form-control me-2" type="search" placeholder="" aria-label="Search">
+                <button @onclick="getdatos" class="btn btn-outline-success">
+                    <i class="oi oi-magnifying-glass" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="card-body">
+        <br />
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <label for="formGroupExampleInput">Nombre</label>
+                    <input value="@nombre" type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput">Apellido</label>
+                    <input value="@apellido" type="text" class="form-control" placeholder="Apellido">
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput">Fecha Nacimiento</label>
+                    <input class="form-control" type="date" value="@fecha" id="example-date-input">
+                </div>
+
+            </div>
+        </form>
+        <br />
+        <form>
+            <div class="form-row">
+                @*<div class="col">
+                    <label for="formGroupExampleInput">Vacuna</label>
+                    <select @bind="vacuna " id="Vacuna" name="Vacuna" class="form-control">
+                        <option value="">Seleccione...</option>
+                        @if (LS_V != null)
+                        {
+                            @foreach (var item in LS_V)
+                            {
+                                <option value="@item.MARCA">@item.MARCA</option>
+                            }
+                        }
+                    </select>
+                </div>*@
+                <div class="col">
+                    <label for="formGroupExampleInput">Provincia</label>
+                    <select @bind="provincia" id="Provincia" name="Provincia" class="form-control">
+                        <option value="">Seleccione...</option>
+                        @if (LS_P != null)
+                        {
+                            @foreach (var item in LS_P)
+                            {
+                                <option value="@item.NOMBRE">@item.NOMBRE</option>
+                            }
+                        }
+                    </select>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+    @*<div class="card-footer">
+        <button @onclick="getcedula" style="width:100%" class="btn btn-primary" type="button">Agregar</button>
+    </div>*@
+</div>
+
+@code {
+
+    string cedula = "";
+    string nombre = "";
+    string apellido = "";
+    string fecha = "";
+
+    private async Task getdatos()
+    {
+        var url = $"https://api.adamix.net/apec/cedula/{cedula}";
+        var data = await http.GetJsonAsync<CEDULA>(url);
+        nombre = data.Nombres;
+        apellido = data.Apellido1;
+        fecha = Convert.ToDateTime(data.FechaNacimiento).ToString("yyy-MM-dd");
+    }
+
+    List<provincia> LS_P = null;
+    string provincia = "";
+    protected override async Task OnInitializedAsync()
+    {
+        var url = "https://api-robov1.herokuapp.com/api/Provinvias";
+        var datos = await  http.GetJsonAsync<List<provincia>>(url);
+        LS_P = datos;
+    }
+
+}

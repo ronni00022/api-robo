@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "BzQOlb9UJDIlsahEHlm2RodJ8twtdeQimfcjOsWHfngwF0fhAnbY8l55cAoLAT334X+pccWjANbAdiRSzipLtg==",
+  "success": true,
+  "projectFilePath": "D:\\Quinto Cuatrimestre\\PROG III\\Segundo Parcial\\Parcial\\Parcial\\Parcial.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\New User\\.nuget\\packages\\microsoft.aspnetcore.blazor.httpclient\\3.2.0-preview3.20168.3\\microsoft.aspnetcore.blazor.httpclient.3.2.0-preview3.20168.3.nupkg.sha512",
+    "C:\\Users\\New User\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\New User\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\New User\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
