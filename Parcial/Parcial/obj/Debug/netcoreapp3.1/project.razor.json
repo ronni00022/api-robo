@@ -78,39 +78,6 @@
         }
       },
       {
-        "HashCode": 719181986,
-        "Kind": "Components.Component",
-        "Name": "Parcial.Pages.FetchData",
-        "AssemblyName": "Parcial",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Parcial.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": 1147517149,
-        "Kind": "Components.Component",
-        "Name": "Parcial.Pages.FetchData",
-        "AssemblyName": "Parcial",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Parcial.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Parcial.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -153283675,
         "Kind": "Components.Component",
         "Name": "Parcial.Pages.Counter",
@@ -140,6 +107,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Parcial.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 719181986,
+        "Kind": "Components.Component",
+        "Name": "Parcial.Pages.FetchData",
+        "AssemblyName": "Parcial",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Parcial.Pages.FetchData"
+        }
+      },
+      {
+        "HashCode": 1147517149,
+        "Kind": "Components.Component",
+        "Name": "Parcial.Pages.FetchData",
+        "AssemblyName": "Parcial",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Parcial.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Parcial.Pages.FetchData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -206,59 +206,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Parcial.Pages.Mapa",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1997350300,
-        "Kind": "Components.Component",
-        "Name": "Parcial.Shared.SurveyPrompt",
-        "AssemblyName": "Parcial",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Parcial.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "HashCode": -95477819,
-        "Kind": "Components.Component",
-        "Name": "Parcial.Shared.SurveyPrompt",
-        "AssemblyName": "Parcial",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Parcial.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Parcial.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -388,6 +335,59 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Parcial.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1997350300,
+        "Kind": "Components.Component",
+        "Name": "Parcial.Shared.SurveyPrompt",
+        "AssemblyName": "Parcial",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Parcial.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "HashCode": -95477819,
+        "Kind": "Components.Component",
+        "Name": "Parcial.Shared.SurveyPrompt",
+        "AssemblyName": "Parcial",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Parcial.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Parcial.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

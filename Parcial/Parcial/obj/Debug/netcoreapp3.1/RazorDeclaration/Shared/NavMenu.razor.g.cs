@@ -13,77 +13,77 @@ namespace Parcial.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 1 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 2 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 3 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 4 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 5 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 6 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 7 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 8 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Parcial;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 9 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Parcial.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 10 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Radzen;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 11 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Radzen.Blazor;
 
 #line default
@@ -97,7 +97,7 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\Shared\NavMenu.razor"
+#line 28 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
