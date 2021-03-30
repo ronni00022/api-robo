@@ -1,5 +1,6 @@
 ﻿@page "/Agregar"
 @inject HttpClient http
+@inject IJSRuntime js
 
 <div class="card" style="width: 70%; margin-left:15%">
     <nav class="navbar navbar-light bg-light">
@@ -35,19 +36,14 @@
         <br />
         <form>
             <div class="form-row">
-                @*<div class="col">
-                    <label for="formGroupExampleInput">Vacuna</label>
-                    <select @bind="vacuna " id="Vacuna" name="Vacuna" class="form-control">
-                        <option value="">Seleccione...</option>
-                        @if (LS_V != null)
-                        {
-                            @foreach (var item in LS_V)
-                            {
-                                <option value="@item.MARCA">@item.MARCA</option>
-                            }
-                        }
-                    </select>
-                </div>*@
+                <div class="col">
+                    <label for="formGroupExampleInput">Latitud</label>
+                    <input @bind-value="@latitud" type="text" class="form-control" placeholder="Latitud">
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput">Longitud</label>
+                    <input @bind-value="@longitud" type="text" class="form-control" placeholder="Longitud">
+                </div>
                 <div class="col">
                     <label for="formGroupExampleInput">Provincia</label>
                     <select @bind="provincia" id="Provincia" name="Provincia" class="form-control">
@@ -64,11 +60,22 @@
                 </div>
 
             </div>
+            <br />
+            <div class="form-row">
+                <div class="col">
+                    <label for="exampleFormControlTextarea1">Descripcion del Robo</label>
+                    <textarea @bind="@desc_robo" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput">Valor</label>
+                    <input @bind-value="@valor" type="text" class="form-control" placeholder="Longitud">
+                </div>
+            </div>
         </form>
     </div>
-    @*<div class="card-footer">
-        <button @onclick="getcedula" style="width:100%" class="btn btn-primary" type="button">Agregar</button>
-    </div>*@
+    <div class="card-footer">
+        <button @onclick="NewAgregar" style="width:100%" class="btn btn-primary" type="button">Agregar</button>
+    </div>
 </div>
 
 @code {
@@ -77,6 +84,10 @@
     string nombre = "";
     string apellido = "";
     string fecha = "";
+    string latitud = "";
+    string longitud = "";
+    string desc_robo = "";
+    string valor = "";
 
     private async Task getdatos()
     {
@@ -94,6 +105,23 @@
         var url = "https://api-robov1.herokuapp.com/api/Provinvias";
         var datos = await  http.GetJsonAsync<List<provincia>>(url);
         LS_P = datos;
+    }
+
+    private async Task NewAgregar()
+    {
+        try
+        {
+            var url = $"https://api-robov1.herokuapp.com/api/Registrar_R/{cedula}/{desc_robo}/{valor}/{provincia}/{latitud}/{longitud}";
+            var datos = await http.GetJsonAsync<MENSAJE>(url);
+
+            await js.InvokeAsync<object>("msjAlert", "Registrado Correctamente", "success");
+        }
+        catch (Exception e)
+        {
+            await js.InvokeAsync<object>("msjAlert", "Error al Registrar", "error");
+        }
+
+
     }
 
 }

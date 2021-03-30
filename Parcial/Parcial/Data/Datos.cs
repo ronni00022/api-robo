@@ -13,3 +13,18 @@ public class provincia
 {
     public string NOMBRE { get; set; }
 }
+
+public class MENSAJE
+{
+    public string mensaje { get; set; }
+}
+
+public class ROBOS
+{
+    public int ID { get; set; }
+    public string CEDULA { get; set; }
+    public string NOMBRE { get; set; }
+    public string APELLIDO { get; set; }
+    public string LATITUD { get; set; }
+    public string LONGITUD { get; set; }
+}

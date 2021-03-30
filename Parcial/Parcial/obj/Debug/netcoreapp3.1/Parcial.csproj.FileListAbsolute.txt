@@ -55,3 +55,8 @@ D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\obj\Debug\netcor
 D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\obj\Debug\netcoreapp3.1\Parcial.dll
 D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\obj\Debug\netcoreapp3.1\Parcial.pdb
 D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\obj\Debug\netcoreapp3.1\Parcial.genruntimeconfig.cache
+D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Mapa.razor.g.cs
+D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\obj\Debug\netcoreapp3.1\Razor\Pages\Mapa.razor.g.cs
+D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\bin\Debug\netcoreapp3.1\Parcial.StaticWebAssets.xml
+D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\bin\Debug\netcoreapp3.1\Radzen.Blazor.dll
+D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll

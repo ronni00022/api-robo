@@ -13,64 +13,78 @@ namespace Parcial.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 1 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 2 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 3 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 4 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 5 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 6 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 7 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 8 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Parcial;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+#line 9 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
 using Parcial.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+using Radzen.Blazor;
 
 #line default
 #line hidden
@@ -84,13 +98,17 @@ using Parcial.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 74 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\Pages\Agregar.razor"
+#line 81 "d:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\Pages\Agregar.razor"
        
 
     string cedula = "";
     string nombre = "";
     string apellido = "";
     string fecha = "";
+    string latitud = "";
+    string longitud = "";
+    string desc_robo = "";
+    string valor = "";
 
     private async Task getdatos()
     {
@@ -110,10 +128,28 @@ using Parcial.Shared;
         LS_P = datos;
     }
 
+    private async Task NewAgregar()
+    {
+        try
+        {
+            var url = $"https://api-robov1.herokuapp.com/api/Registrar_R/{cedula}/{desc_robo}/{valor}/{provincia}/{latitud}/{longitud}";
+            var datos = await http.GetJsonAsync<MENSAJE>(url);
+
+            await js.InvokeAsync<object>("msjAlert", "Registrado Correctamente", "success");
+        }
+        catch (Exception e)
+        {
+            await js.InvokeAsync<object>("msjAlert", "Error al Registrar", "error");
+        }
+
+
+    }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime js { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
     }
 }

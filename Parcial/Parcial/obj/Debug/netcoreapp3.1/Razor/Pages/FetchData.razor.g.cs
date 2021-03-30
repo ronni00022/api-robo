@@ -73,6 +73,20 @@ using Parcial.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 10 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\_Imports.razor"
+using Radzen.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "D:\Quinto Cuatrimestre\PROG III\Segundo Parcial\Parcial\Parcial\Pages\FetchData.razor"
 using Parcial.Data;
 

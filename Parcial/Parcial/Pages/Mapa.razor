@@ -1,5 +1,35 @@
-﻿<h3>Mapa</h3>
+﻿@page "/Mapa"
+@inject HttpClient http
 
+
+<div class="card rounded border border-primary">
+    <div class="card-head bg-primary">
+        <h3 class="text-center text-white"><strong>Mapa</strong></h3>
+    </div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="col-xl-6">
+        <RadzenGoogleMap style="height: 500px;width: 1100px" Zoom=@zoom Center=@(new GoogleMapPosition() { Lat = 19.0149, Lng = -70.4297 })>
+            <Markers>
+                @foreach (var p in LS_R)
+                {
+                    <RadzenGoogleMapMarker Title="@p.NOMBRE" Label="@p.APELLIDO" Position=@(new GoogleMapPosition() { Lat = Convert.ToDouble(p.LATITUD), Lng = Convert.ToDouble(p.LONGITUD)}) />
+                }
+            </Markers>
+        </RadzenGoogleMap>
+    </div>
+</div>
 @code {
+    int zoom = 7;
+    List<ROBOS> LS_R = new List<ROBOS>();
+    protected override async Task OnInitializedAsync()
+    {
+        var url = "https://api-robov1.herokuapp.com/api/Robos";
+        var datos = await http.GetJsonAsync<List<ROBOS>>(url);
+        LS_R = datos;
+        
+    }
 
 }
