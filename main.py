@@ -30,7 +30,7 @@ def Registrar_P(cedula: str, des_robo: str, valor: str, lugar: str,latitud:str,l
     respuesta = urllib.request.urlopen('https://api.adamix.net/apec/cedula/'+cedula+'')
     data = json.loads(respuesta.read())     
     try:
-        info= (data['Cedula'],data['Nombres'],data['Apellido1'],datetime.datetime.strptime(data['FechaNacimiento'], '%Y-%m-%d %H:%M:%S.%f').date(),des_robo,lugar,longitud,longitud,valor)
+        info= (data['Cedula'],data['Nombres'],data['Apellido1'],datetime.datetime.strptime(data['FechaNacimiento'], '%Y-%m-%d %H:%M:%S.%f').date(),des_robo,lugar,latitud,longitud,valor)
         sql=''' INSERT INTO ROBO(CEDULA,NOMBRE,APELLIDO,FECHA_N,DES_ROBO,PROVINCIA,LATITUD,LONGITUD,VALOR) VALUES (?,?,?,?,?,?,?,?,?) '''
         registro.execute(sql,info)
         conexion.commit()
